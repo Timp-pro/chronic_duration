@@ -46,7 +46,6 @@ module ChronicDuration
   # Given an integer and an optional format,
   # returns a formatted string representing elapsed time
   def output(seconds, opts = {})
-    return "hola mundo"
     int = seconds.to_i
     seconds = int if seconds - int == 0 # if seconds end with .0
 
@@ -113,11 +112,11 @@ module ChronicDuration
         :years => 'y', :months => 'mo', :weeks => 'w', :days => 'd', :hours => 'h', :minutes => 'm', :seconds => 's' }
     when :default
       dividers = {
-        :years => ' yr', :months => ' mo', :weeks => ' wk', :days => ' day', :hours => ' hr', :minutes => ' min', :seconds => ' sec',
+        :years => ' yr', :months => ' mo', :weeks => ' wk', :days => " #{t(:day)}", :hours => ' hr', :minutes => ' min', :seconds => ' sec',
         :pluralize => true }
     when :long
       dividers = {
-        :years => ' year', :months => ' month', :weeks => ' week', :days => ' day', :hours => ' hour', :minutes => ' minute', :seconds => ' second',
+        :years => " #{t(:year)}", :months => " #{t(:month)}", :weeks => " #{t(:week)}", :days => " #{t(:day)}", :hours => " #{t(:hour)}", :minutes => " #{t(:minute)}", :seconds => " #{t(:second)}",
         :pluralize => true }
     when :chrono
       dividers = {
