@@ -112,11 +112,11 @@ module ChronicDuration
         :years => 'y', :months => 'mo', :weeks => 'w', :days => 'd', :hours => 'h', :minutes => 'm', :seconds => 's' }
     when :default
       dividers = {
-        :years => ' yr', :months => ' mo', :weeks => ' wk', :days => " #{t(:day)}", :hours => ' hr', :minutes => ' min', :seconds => ' sec',
+        :years => ' yr', :months => ' mo', :weeks => ' wk', :days => " #{I18n.t(:day)}", :hours => ' hr', :minutes => ' min', :seconds => ' sec',
         :pluralize => true }
     when :long
       dividers = {
-        :years => " #{t(:year)}", :months => " #{t(:month)}", :weeks => " #{t(:week)}", :days => " #{t(:day)}", :hours => " #{t(:hour)}", :minutes => " #{t(:minute)}", :seconds => " #{t(:second)}",
+        :years => " #{I18n.t(:year)}", :months => " #{I18n.t(:month)}", :weeks => " #{I18n.t(:week)}", :days => " #{I18n.t(:day)}", :hours => " #{I18n.t(:hour)}", :minutes => " #{I18n.t(:minute)}", :seconds => " #{I18n.t(:second)}",
         :pluralize => true }
     when :chrono
       dividers = {
